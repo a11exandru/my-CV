@@ -1,0 +1,21 @@
+-
+  var myFullName = 'Alexandru Puiu'
+  var myJobTitle = 'Student'
+  var socialList = [
+    {icon: 'facebook', url: 'https://facebook.com/a11exandru'},
+    {icon: 'instagram', url: 'https://instagram.com/a11exandru'},
+    {icon: 'mail', account: 'alexpuiu20@yahoo.com'},
+    {icon: 'whatsapp', number: '0762182110'},
+    {icon: 'skype', url: 'https://join.skype.com/invite/bnrs0JPFRuca'},
+    {icon: 'github', url: 'https://github.com/a11exandru'},
+  ]
+#landing-page
+  .landing-page
+    .landing-page__wrapper
+      h1.landig-page__name #{myFullName}
+      h2.landing-page__title #{myJobTitle}
+      ul.landing-page__social
+        each social in socialList
+          li.landing-page__item
+            label.landing-page__label(for="")
+              span(class=`my-cv__icon--${social.icon}`)
