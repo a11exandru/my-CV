@@ -27,13 +27,13 @@
   .about-me__avatar-wrapper
     img.about-me__avatar(src=imagePath, alt="Aici trebuia sa fie un baiat f frumos")
   .about-me__full-name=myFullName
-  .about-me__full-title=myTitle
+  .about-me__title=myTitle
   .about-me__slogan=slogan
   .about-me__title=achievements.title
   .about-me__content=achievements.content
-  .about-me__grab-cool-stuff=coolStuff.title
+  .about-me__title=coolStuff.title
   .about-me__link-list
     each button in coolStuff.buttonList
-      a(href=button.url)
+      a.about-me__link(href=button.url)
         span=button.label
-        span(class=`my-cv__icon--${button.icon}`)
+        span.about-me__link-description(class=`my-cv__icon--${button.icon}`)
