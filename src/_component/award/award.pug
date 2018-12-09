@@ -1,6 +1,28 @@
 -
   var awardHeader='#Awards';
+  var award= { 
+    title: '100 rating of my first project (w3schools-replica) on Google PageSpeed',
+    description: 'I have gained experience after this project',
+    location: 'Iasi / Romania',
+    date: '2018',
+  };
 
 #award
 .award
   .award__header=awardHeader
+  .award__card
+    .award__icon
+      span.my-cv__icon--trophy
+    .award__title=award.title
+
+    .award__icon
+      span.my-cv__icon--info
+    .award__description=award.description
+
+    .award__icon
+      span.my-cv__icon--map
+    .award__location=award.location
+
+    .award__icon
+      span.my-cv__icon--calendar
+    .award__date=award.date
