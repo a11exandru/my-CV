@@ -1,0 +1,44 @@
+//- model, data
+-
+  var header= '#Experience'
+  var experienceList= [
+    {
+      title: 'My first website',
+      date: '2 December 2018',
+      company: 'Acasa',
+      responsabilityList: [
+        'Am facut site-ul',
+        'L-am urcat pe internet',
+      ]
+    },
+    {
+      title: 'My first CV',
+      date: 'In lucru',
+      company: 'At home',
+      responsabilityList: [
+        'Am facut site-ul',
+        'L-am urcat pe internet',
+      ]
+    }
+  ];
+
+//- view, presentation
+//-   CSS "+" : checked
+    input
+    controlled container (div, or whatever)
+
+#experience
+.experience
+  .experience__header=header
+  input(type="radio", name='my-experience', id='experience-default')
+  label(for='experience-default') &times;
+  each experience, key in experienceList
+    input.experience__input(type="radio", name='my-experience', id=`experience-id-${key}`)
+    label.experience__title(for=`experience-id-${key}`)=experience.title
+    .experience__details
+      .experiece__top
+        .experience__date= experience. date
+        .experience__company= experience.company 
+      .experience__list
+      each responsability in experience.responsabilityList
+          .experience__responsability=responsability
