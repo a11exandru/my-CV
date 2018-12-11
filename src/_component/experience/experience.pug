@@ -9,6 +9,8 @@
       responsabilityList: [
         'Am facut site-ul',
         'L-am urcat pe internet',
+        'Ma uit la el',
+        'Cam atat',
       ]
     },
     {
@@ -18,6 +20,8 @@
       responsabilityList: [
         'Am facut site-ul',
         'L-am urcat pe internet',
+        'Cam asa',
+        'Cam atat',
       ]
     }
   ];
@@ -30,11 +34,13 @@
 #experience
 .experience
   .experience__header=header
-  input(type="radio", name='my-experience', id='experience-default')
-  label(for='experience-default') &times;
+  input.experience__input(type="radio", name='my-experience', id='experience-default')
+
   each experience, key in experienceList
-    input.experience__input(type="radio", name='my-experience', id=`experience-id-${key}`)
-    label.experience__title(for=`experience-id-${key}`)=experience.title
+    input.experience__input(type="radio", name='my-experience',  id=`experience-id-${key}`)
+    label.experience__title(for=`experience-id-${key}`) #{experience.title}
+      label(for='experience-default')
+        span.my-cv__icon--plus
     .experience__details
       .experiece__top
         .experience__date= experience. date
